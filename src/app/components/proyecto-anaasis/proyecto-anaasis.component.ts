@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
-import { gitBranchOutline, peopleOutline, codeWorkingOutline, checkmarkCircleOutline, logoAndroid } from 'ionicons/icons';
+import { gitBranchOutline, peopleOutline, codeWorkingOutline, checkmarkCircleOutline, logoAndroid, lockClosedOutline } from 'ionicons/icons';
 import { IonIcon, IonChip } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-anaasis',
@@ -16,10 +16,12 @@ export class ProyectoAnaasisComponent {
     'Implementación de nuevas funcionalidades solicitadas por los usuarios finales.',
     'Colaboración activa en la reconstrucción de módulos críticos del sistema.',
     'Utilización de geolocalización la cual mejora la busqueda de hospitales y medicos cercanos.',
+    'Implementación de funcionalidades con Inteligencia Artificial y Machine Learning.',
+    'Implementación de transcripción con voz.',
   ];
 
   constructor() {
-    addIcons({logoAndroid,peopleOutline,checkmarkCircleOutline,gitBranchOutline,codeWorkingOutline,});
+    addIcons({logoAndroid,lockClosedOutline,peopleOutline,checkmarkCircleOutline,gitBranchOutline,codeWorkingOutline,});
   }
   // Función para manejar el scroll con la rueda del mouse sin usar Shift
  onWheel(event: WheelEvent, container: HTMLElement) {

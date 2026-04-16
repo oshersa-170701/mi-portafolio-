@@ -26,7 +26,8 @@ export class ProyectoGugarComponent {
     'Optimización de la interfaz de usuario siguiendo los lineamientos de marca Gugar.',
     'Integración de servicios para la sincronización de datos en tiempo real.',
     'Mejora en el rendimiento de la aplicación mediante carga perezosa (Lazy Loading).',
-    'Perfiles de usuario con diferentes niveles de acceso y actividades.'
+    'Perfiles de usuario con diferentes niveles de acceso y actividades.',
+    'Seguimiento en tiempo real en las actividades de reparto y entrega.'
   ];
 
   constructor() {
