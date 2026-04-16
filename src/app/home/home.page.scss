@@ -50,3 +50,32 @@ background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
 ion-content {
   --overflow: auto; // Fuerza un scroll más controlado
 }
+.white-container {
+  padding: 10px; // Espacio mínimo en móvil
+  background: transparent; // Deja que el bg-light del content luzca
+
+  @media (min-width: 768px) {
+    padding: 30px 50px; // Más espacio en tablets y PC
+  }
+
+  .label-section {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    color: #1e1e2d;
+    border-left: 6px solid #5849be; // Un detalle elegante al título
+  }
+}
+
+/* 📍 Ajuste para que las tarjetas tengan la misma altura */
+ion-col {
+  display: flex;
+  flex-direction: column;
+}
+
+app-proyecto-utvco, 
+app-proyecto-anaasis, 
+app-proyecto-gugar {
+  flex: 1; // Obliga a los componentes a estirarse uniformemente
+}
