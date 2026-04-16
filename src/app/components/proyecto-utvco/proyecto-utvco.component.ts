@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { addIcons } from 'ionicons';
-import { schoolOutline, imageOutline, checkmarkCircleOutline, lockClosedOutline } from 'ionicons/icons';
+import { schoolOutline, imageOutline, checkmarkCircleOutline, lockClosedOutline, rocketOutline } from 'ionicons/icons';
 import { IonIcon, IonChip } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-utvco',
@@ -32,7 +32,7 @@ export class ProyectoUtvcoComponent   {
   ];
 
   constructor() {
-    addIcons({schoolOutline,lockClosedOutline,checkmarkCircleOutline,imageOutline});
+    addIcons({schoolOutline,rocketOutline,checkmarkCircleOutline,lockClosedOutline,imageOutline});
   }
 
 public indicePagina: number = 0;

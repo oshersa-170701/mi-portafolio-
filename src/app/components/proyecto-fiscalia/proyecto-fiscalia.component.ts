@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
-import { shieldCheckmarkOutline, lockClosedOutline, chevronForwardCircleOutline, checkmarkCircleOutline } from 'ionicons/icons';
+import { shieldCheckmarkOutline, lockClosedOutline, chevronForwardCircleOutline, checkmarkCircleOutline, rocketOutline } from 'ionicons/icons';
 import { IonIcon, IonChip } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-fiscalia',
@@ -27,6 +27,6 @@ export class ProyectoFiscaliaComponent {
   ];
 
   constructor() {
-    addIcons({shieldCheckmarkOutline,lockClosedOutline,chevronForwardCircleOutline,checkmarkCircleOutline});
+    addIcons({shieldCheckmarkOutline,rocketOutline,chevronForwardCircleOutline,checkmarkCircleOutline,lockClosedOutline});
   }
 }
