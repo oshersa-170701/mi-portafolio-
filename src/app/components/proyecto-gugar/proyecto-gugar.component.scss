@@ -186,3 +186,18 @@
     }
   }
 }
+/* Estilos para móviles (por defecto) */
+.slide img {
+  height: 250px; // Más bajitas en celular
+}
+
+/* 📍 Ajustes para pantallas grandes (PC) */
+@media (min-width: 992px) {
+  .slide img {
+    height: 350px; // Más altas en escritorio
+  }
+  
+  .card-proyecto {
+    padding: 30px; // Más aire en los bordes
+  }
+}

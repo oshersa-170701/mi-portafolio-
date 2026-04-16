@@ -1,15 +1,21 @@
-<ion-content [fullscreen]="true" class="bg-light">
-  <header class="main-header">
-    <app-perfil-usuario></app-perfil-usuario>
-  </header>
-
+<ion-content class="bg-light">
   <main class="white-container">
     <div class="label-section">Mis Proyectos</div>
-    <div class="projects-container">
-      <app-proyecto-utvco></app-proyecto-utvco>
-      <app-proyecto-fiscalia></app-proyecto-fiscalia>
-      <app-proyecto-anaasis></app-proyecto-anaasis>
-      <app-proyecto-gugar></app-proyecto-gugar>
-    </div>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <app-proyecto-utvco></app-proyecto-utvco>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="4">
+          <app-proyecto-anaasis></app-proyecto-anaasis>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="4">
+          <app-proyecto-gugar></app-proyecto-gugar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </main>
 </ion-content>
