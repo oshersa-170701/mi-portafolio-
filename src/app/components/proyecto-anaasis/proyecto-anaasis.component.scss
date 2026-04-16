@@ -111,13 +111,18 @@
     }
   }
 }
-  .tech-tags {
-    margin-top: 15px;
+ .tech-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
     ion-chip {
-      --color: #5849be;
-      --border-color: #5849be;
-      font-size: 0.75rem;
-      font-weight: 600;
+      --color: #5849be !important;
+      --background: transparent;
+      border: 1px solid #5849be !important;
+      font-size: 0.8rem;
+      font-weight: 700;
     }
   }
 }
