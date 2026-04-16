@@ -35,3 +35,11 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+:root {
+  /* Azul Gugar Principal */
+  --ion-color-primary: #0052cc; 
+  --ion-color-primary-rgb: 0, 82, 204;
+  
+  /* Fondo claro para que resalte la tarjeta */
+  --ion-background-color: #f4f7fa; 
+}

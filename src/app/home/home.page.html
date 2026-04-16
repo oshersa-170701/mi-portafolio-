@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="bg-light">
+  <header class="main-header">
+    <app-perfil-usuario></app-perfil-usuario>
+  </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <main class="white-container">
+    <div class="label-section">Mis Proyectos</div>
+    <div class="projects-container">
+      <app-proyecto-utvco></app-proyecto-utvco>
+      <app-proyecto-fiscalia></app-proyecto-fiscalia>
+      <app-proyecto-anaasis></app-proyecto-anaasis>
+      <app-proyecto-gugar></app-proyecto-gugar>
+    </div>
+  </main>
 </ion-content>

@@ -1,0 +1,97 @@
+.card-proyecto {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  border: 1px solid rgba(88, 73, 190, 0.05);
+
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .icon-box.dark-purple {
+      background: #4a3ba3; // Un morado más imponente
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 800;
+      color: #1e1e2d;
+    }
+    .title-info {
+      h3 {
+        color: #1e1e2d !important; // Fuerza el color oscuro
+      }
+      p {
+        color: #4b4b5e !important; // Un gris oscuro legible
+        opacity: 1 !important;
+        margin: 0;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .fiscalia-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eef2ff;
+    color: #4a3ba3;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+
+ .logros-container {
+    background: #f8f9ff; // Un azul muy pálido para que resalte el texto
+    border-left: 4px solid #4a3ba3;
+    padding: 15px;
+    border-radius: 0 15px 15px 0;
+    
+    h4 { 
+      color: #1e1e2d !important; 
+      margin-bottom: 12px; 
+    }
+
+    .logros-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+      span {
+        color: #2d2d3a !important; // Asegura que el texto sea visible
+        font-size: 0.9rem;
+      }
+
+      ion-icon { 
+        color: #4a3ba3; 
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .tech-tags {
+    margin-top: 15px;
+    ion-chip {
+      --color: #5849be;
+      --border-color: #5849be;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+}

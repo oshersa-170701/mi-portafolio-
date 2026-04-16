@@ -1,0 +1,42 @@
+<div class="card-proyecto results-fade-in">
+  <div class="header-section">
+    <div class="icon-box purple">
+      <ion-icon name="school-outline"></ion-icon>
+    </div>
+    <div class="title-info">
+      <h3>Sistema de Tutorías UTVCO</h3>
+      <p>Grupales o Generales, Culturales y Deportivas</p>
+    </div>
+  </div>
+<div class="carousel-container">
+  <div class="slider-wrapper" #slider>
+    @for (img of imagenes; track $index) {
+      <div class="slide">
+        <img [src]="img" alt="Captura de pantalla">
+      </div>
+    }
+  </div>
+</div>
+
+  @if (logros && logros.length > 0) {
+    <div class="logros-container">
+      <h4>Impacto y Logros </h4>
+      <ul class="logros-list">
+        @for (logro of logros; track $index) {
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <span>{{ logro }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <div class="tech-tags">
+    <ion-chip outline="true">Angular</ion-chip>
+    <ion-chip outline="true">Ionic</ion-chip>
+    <ion-chip outline="true">Laravel</ion-chip>
+    <ion-chip outline="true">MySQL</ion-chip>
+    <ion-chip outline="true">Windows Server</ion-chip>
+  </div>
+</div>

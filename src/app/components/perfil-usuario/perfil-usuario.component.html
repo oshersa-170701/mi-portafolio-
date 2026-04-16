@@ -1,0 +1,32 @@
+<div class="perfil-container ion-text-center ion-padding">
+  <div class="avatar-wrapper">
+    <ion-avatar>
+      <img src="assets/yo.jpg" alt="Oswaldo Hernández" />
+    </ion-avatar>
+  </div>
+
+  <ion-text color="dark">
+    <h1>{{ usuario.nombre }}</h1>
+    <p class="puesto">{{ usuario.puesto }}</p>
+  </ion-text>
+  <p class="ubicacion">
+    <ion-icon name="location-outline"></ion-icon> {{ usuario.ubicacion }}
+  </p>
+
+  <div class="social-links">
+    @for (red of usuario.redes; track red.nombre) {
+      <ion-button fill="clear" [href]="red.url" target="_blank">
+        <ion-icon slot="icon-only" [name]="red.icon" color="white"></ion-icon>
+      </ion-button>
+    }
+
+    @if (usuario.correo) {
+      <ion-button 
+    fill="clear" 
+    [href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + usuario.correo" 
+    target="_blank">
+        <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+      </ion-button>
+    }
+  </div>
+</div>

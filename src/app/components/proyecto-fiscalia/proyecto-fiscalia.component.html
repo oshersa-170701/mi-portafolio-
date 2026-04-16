@@ -1,0 +1,51 @@
+<div class="card-proyecto results-fade-in">
+  <div class="header-section">
+    <div class="icon-box dark-purple">
+      <ion-icon name="shield-checkmark-outline"></ion-icon>
+    </div>
+    <div class="title-info">
+      <h3>Sistema de Regitros y/o Actualización de Delitos de Alto Impacto </h3>
+      <p >Central de Inteligencia Criminal</p>
+    </div>
+  </div>
+
+  <div class="fiscalia-badge">
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    <span>Software de Alta Seguridad</span>
+  </div>
+
+  @if (logros && logros.length > 0) {
+    <div class="logros-container">
+      <h4>Módulos Desarrollados </h4>
+      <ul class="logros-list">
+        @for (logro of logros; track $index) {
+          <li>
+            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+            <span>{{ logro }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+  @if (obj && obj.length > 0) {
+    <div class="logros-container">
+      <h4>Impacto y Logros </h4>
+      <ul class="logros-list">
+        @for (logro of obj; track $index) {
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <span>{{ logro }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <div class="tech-tags">
+    <ion-chip outline="true">NestJS</ion-chip>
+    <ion-chip outline="true">PostgreSQL</ion-chip>
+    <ion-chip outline="true">Ionic</ion-chip>
+    <ion-chip outline="true">Angular</ion-chip>
+    <ion-chip outline="true">Debian Server</ion-chip>
+  </div>
+</div>

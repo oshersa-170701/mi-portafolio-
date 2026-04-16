@@ -1,0 +1,48 @@
+<div class="card-proyecto results-fade-in force-light">
+  <div class="header-section">
+    <div class="icon-box dark-purple">
+      <ion-icon name="business-outline"></ion-icon>
+    </div>
+    <div class="title-info">
+      <h3 class="force-dark">App Gugar</h3>
+      <p class="force-dark-sub">Sistema de Gestión y Control Empresarial</p>
+    </div>
+  </div>
+
+  <div class="enterprise-badge">
+    <ion-icon name="rocket-outline"></ion-icon>
+    <span>Solución Corporativa</span>
+  </div>
+
+  <div class="carousel-container" (wheel)="onWheel($event, slider)">
+    <div class="slider-wrapper" #slider>
+      @for (img of imagenes; track $index) {
+        <div class="slide">
+          <img [src]="img" alt="Captura App Gugar">
+        </div>
+      }
+    </div>
+  </div>
+
+  @if (logros && logros.length > 0) {
+    <div class="logros-container">
+      <h4 class="force-dark">Funcionalidades Implementadas</h4>
+      <ul class="logros-list">
+        @for (logro of logros; track $index) {
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <span class="force-dark-text">{{ logro }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <div class="tech-tags">
+    <ion-chip class="custom-chip">Ionic</ion-chip>
+    <ion-chip class="custom-chip">Angular</ion-chip>
+    <ion-chip class="custom-chip">Node.js</ion-chip>
+    <ion-chip class="custom-chip">Enterprise UI</ion-chip>
+    <ion-chip class="custom-chip">NestJS</ion-chip>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="card-proyecto results-fade-in">
+  <div class="header-section">
+    <div class="icon-box purple">
+      <ion-icon name="logo-android"></ion-icon>
+    </div>
+    <div class="title-info">
+      <h3>App ANA-ASIS</h3>
+      <p>Reconstrucción y Colaboración Continua</p>
+    </div>
+  </div>
+<div class="carousel-container" (wheel)="onWheel($event, slider)">
+  <div class="slider-wrapper" #slider>
+    @for (img of imagenes; track $index) {
+      <div class="slide">
+        <img [src]="img" alt="Captura UTVCO">
+      </div>
+    }
+  </div>
+</div>
+  <div class="colab-badge">
+    <ion-icon name="people-outline"></ion-icon>
+    <span>Colaboración Técnica</span>
+  </div>
+
+  @if (logros && logros.length > 0) {
+    <div class="logros-container">
+      <h4>Aportes Clave</h4>
+      <ul class="logros-list">
+        @for (logro of logros; track $index) {
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <span>{{ logro }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <div class="tech-tags">
+    <ion-chip outline="true">Ionic</ion-chip>
+    <ion-chip outline="true">Angular</ion-chip>
+    <ion-chip outline="true">API REST</ion-chip>
+    <ion-chip outline="true">Refactoring</ion-chip>
+    <ion-chip outline="true">IA</ion-chip>
+    <ion-chip outline="true">Android</ion-chip>
+  </div>
+</div>

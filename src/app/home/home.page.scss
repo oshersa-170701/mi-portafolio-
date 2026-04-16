@@ -1,27 +1,52 @@
-#container {
-  text-align: center;
+/*main-header {
+background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  padding: 40px 20px 80px 20px; // Padding ajustado
+  color: white;
+}*/
+.main-header {
+  /* Un degradado oscuro con un toque de color eléctrico */
+  background: linear-gradient(135deg, #0f0c29 0%, #783296 50%, #24243e 100%);
+  padding: 40px 20px 80px 20px; // Padding ajustado
+  color: white;
+ 
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  // Agregamos un brillo sutil que lo hace ver único
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(104, 109, 224, 0.15) 0%, transparent 50%);
+    animation: rotate 10s linear infinite;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.white-container {
+  background: #f4f6fa;
+  margin-top: -40px; // Sube un poco menos para dejar ver bien el perfil
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  min-height: 60vh;
+  padding: 20px;
+    overflow-x: hidden; // 📍 Evita que cualquier componente "empuje" hacia los lados
 
-  color: #8c8c8c;
-
-  margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+.label-section {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #783296; // El azul de Gugar para el título de la sección
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+ion-content {
+  --overflow: auto; // Fuerza un scroll más controlado
 }

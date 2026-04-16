@@ -1,2 +1,16 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+  
+  /* Azul Gugar */
+  --gugar-blue: #0099ff;
+  --gugar-blue-dark: #20b0ff;
+  --gugar-blue-light: #f4f6fa;
+  
+  --ion-color-primary: var(--gugar-blue);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
