@@ -1,13 +1,13 @@
 import { Component} from '@angular/core';
 import { addIcons } from 'ionicons';
-import { schoolOutline, imageOutline, checkmarkCircleOutline, lockClosedOutline, rocketOutline } from 'ionicons/icons';
-import { IonIcon, IonChip } from '@ionic/angular/standalone';
+import { schoolOutline, imageOutline, checkmarkCircleOutline, lockClosedOutline, rocketOutline, closeOutline } from 'ionicons/icons';
+import { IonIcon, IonChip, IonContent, IonModal } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-utvco',
   templateUrl: './proyecto-utvco.component.html',
   styleUrls: ['./proyecto-utvco.component.scss'],
   standalone: true,
-  imports: [IonIcon, IonChip]
+  imports: [IonModal, IonContent, IonIcon, IonChip]
 })
 export class ProyectoUtvcoComponent   {
 
@@ -32,7 +32,7 @@ export class ProyectoUtvcoComponent   {
   ];
 
   constructor() {
-    addIcons({schoolOutline,rocketOutline,checkmarkCircleOutline,lockClosedOutline,imageOutline});
+    addIcons({schoolOutline,rocketOutline,closeOutline,checkmarkCircleOutline,lockClosedOutline,imageOutline});
   }
 
 public indicePagina: number = 0;
@@ -72,4 +72,11 @@ onWheel(event: WheelEvent, container: HTMLElement) {
     container.scrollLeft += event.deltaX;
   }
 }
+isModalOpen = false;
+  selectedImage: string = '';
+
+  openImage(img: string) {
+    this.selectedImage = img;
+    this.isModalOpen = true;
+  }
 }
