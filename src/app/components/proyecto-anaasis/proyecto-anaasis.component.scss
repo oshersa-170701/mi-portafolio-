@@ -1,9 +1,11 @@
 .card-proyecto {
-  background: white;
+  background: #ffffff !important; // Fondo blanco puro para la tarjeta
   border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   margin-bottom: 25px;
+  border: 1px solid rgba(88, 73, 190, 0.1);
+  display: block; // Asegura que se renderice como bloque
 
   .header-section {
     display: flex;
@@ -11,34 +13,107 @@
     gap: 15px;
     margin-bottom: 20px;
 
-    .icon-box {
+    .icon-box.dark-purple {
+      background: #4a3ba3 !important;
+      color: #ffffff !important;
       width: 50px;
       height: 50px;
-      border-radius: 15px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      
-      &.purple {
-        background: #f0eeff;
-        color: #5849be; // El morado de tu identidad
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .title-info {
+      h3 {
+        color: #1e1e2d !important; // Azul casi negro para el título
+        margin: 0;
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+      p {
+        color: #5a5a75 !important; // Gris oscuro para el subtítulo
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 1 !important;
       }
     }
+  }
 
-    h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #333;
-    }
+  .enterprise-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eef2ff !important;
+    color: #4a3ba3 !important;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: fit-content;
 
-    p {
-      margin: 0;
-      font-size: 0.85rem;
-      color: #666;
+    ion-icon {
+       color: #4a3ba3 !important;
     }
   }
+
+  .logros-container {
+    background: #f8f9ff !important;
+    border-left: 4px solid #4a3ba3;
+    padding: 15px;
+    border-radius: 0 15px 15px 0;
+    margin-top: 20px;
+    
+    h4 { 
+      color: #1e1e2d !important; 
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+
+    .logros-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        span {
+          color: #33334d !important; // Texto muy legible
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+
+        ion-icon { 
+          color: #4a3ba3 !important; 
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .tech-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    ion-chip {
+      --color: #5849be !important;
+      --background: transparent;
+      border: 1px solid #5849be !important;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
+}
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -111,68 +186,7 @@
     }
   }
 }
- .tech-tags {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    ion-chip {
-      --color: #5849be !important;
-      --background: transparent;
-      border: 1px solid #5849be !important;
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-  }
-}
-.logros-container {
-    background: #f8f9ff; // Un azul muy pálido para que resalte el texto
-    border-left: 4px solid #4a3ba3;
-    padding: 15px;
-    border-radius: 0 15px 15px 0;
-    
-    h4 { 
-      color: #1e1e2d !important; 
-      margin-bottom: 12px; 
-    }
-
-    .logros-list li {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      
-      span {
-        color: #2d2d3a !important; // Asegura que el texto sea visible
-        font-size: 0.9rem;
-      }
-
-      ion-icon { 
-        color: #4a3ba3; 
-        font-size: 1.2rem;
-      }
-    }
-  }
-
- .enterprise-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #eef2ff !important;
-    color: #4a3ba3 !important;
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    width: fit-content;
-
-    ion-icon {
-       color: #4a3ba3 !important;
-    }
-  }
-  /* Estilos para móviles (por defecto) */
+/* Estilos para móviles (por defecto) */
 .slide img {
   height: 250px; // Más bajitas en celular
 }
