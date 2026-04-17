@@ -11,32 +11,32 @@
     gap: 15px;
     margin-bottom: 20px;
 
-    .icon-box {
+    .icon-box.dark-purple {
+      background: #4a3ba3 !important;
+      color: #ffffff !important;
       width: 50px;
       height: 50px;
-      border-radius: 15px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      
-      &.purple {
-        background: #f0eeff;
-        color: #5849be; // El morado de tu identidad
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .title-info {
+      h3 {
+        color: #1e1e2d !important; // Azul casi negro para el título
+        margin: 0;
+        font-weight: 800;
+        font-size: 1.2rem;
       }
-    }
-
-    h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #333;
-    }
-
-    p {
-      margin: 0;
-      font-size: 0.85rem;
-      color: #666;
+      p {
+        color: #5a5a75 !important; // Gris oscuro para el subtítulo
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 1 !important;
+      }
     }
   }
 .carousel-container {
