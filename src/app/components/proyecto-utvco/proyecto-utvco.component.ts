@@ -26,7 +26,7 @@ export class ProyectoUtvcoComponent   {
   // Lista de logros para mostrar con @if
   public logros: string[] = [
     'Automatización del registro para actividades culturales y deportivas.',
-    'Gestión eficiente de tutorías grupales o generales con roles de docente y alumno.',
+    'Gestión eficiente de tutorías grupales o generales con roles de instructor , alumno y administrador.',
     'Generación de reportes de alumnos inscritos en alguna tutoría.',
     'Implementación del proyecto en el servidor de la universidad para su uso dentro de la institución.'
   ];

@@ -15,7 +15,7 @@ export class ProyectoAnaasisComponent {
     'Optimización de consultas y consumo de APIs para reducir tiempos de carga.',
     'Implementación de nuevas funcionalidades solicitadas por los usuarios finales.',
     'Colaboración activa en la reconstrucción de módulos críticos del sistema.',
-    'Utilización de geolocalización la cual mejora la busqueda de hospitales y medicos cercanos.',
+    'Utilización de geolocalización la cual ayuda a mejorar en la busqueda de hospitales y medicos cercanos.',
     'Implementación de funcionalidades con Inteligencia Artificial y Machine Learning.',
     'Implementación de transcripción con voz.',
   ];

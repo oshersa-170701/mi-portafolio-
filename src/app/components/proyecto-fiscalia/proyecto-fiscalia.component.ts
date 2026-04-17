@@ -18,12 +18,12 @@ export class ProyectoFiscaliaComponent {
   ];
   public obj: string[] = [
     'CRUD de todos los módulos.',
-    'Interelación entre módulos.',
+    'Interrelación entre módulos.',
     'Guardado de imágenes con seguridad.',
     'Implementación de protocolos de seguridad.',
-    'Utiliacion de JWT para autenticación y autorización.',
+    'Utilización de JWT para autenticación y autorización.',
     'Despliegue en servidor del CIC.',
-    'Implementación de mapa interactivo para geolocalización de domicilios o localidades.'
+    'Implementación de un mapa interactivo para geolocalización de domicilios o localidades.'
   ];
 
   constructor() {
