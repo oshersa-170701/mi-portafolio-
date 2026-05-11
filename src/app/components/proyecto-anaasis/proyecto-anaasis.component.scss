@@ -13,22 +13,26 @@
     gap: 15px;
     margin-bottom: 20px;
 
-    .icon-box.dark-purple {
-  background: #4a3ba3 !important;
-  width: 50px;
-  height: 50px;
+.icon-box.dark-purple {
+  background: #4a3ba3 !important; // Tu morado de fondo
+  width: 55px;  // Lo subí un poquito para que luzca más el logo
+  height: 55px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; // 📍 Mantiene el logo dentro de las esquinas redondeadas
-  padding: 5px;    // 📍 Le da un pequeño "aire" al logo dentro del cuadro
+  overflow: hidden;
+  padding: 8px; // 📍 Aumentamos el padding para darle "aire" al logo (puedes subirlo a 10px si quieres)
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Un detalle de sombra
 
   .logo-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; // 📍 Evita que el logo se estire o deforme
-    filter: brightness(0) invert(1); // 📍 OPCIONAL: Si el logo es oscuro, esto lo vuelve blanco
+    /* 📍 CLAVE: Mantiene los colores originales y la proporción */
+    object-fit: contain; 
+    /* 📍 IMPORTANTE: Asegúrate de que NO haya filtros aquí */
+    filter: none !important; 
   }
 }
 
