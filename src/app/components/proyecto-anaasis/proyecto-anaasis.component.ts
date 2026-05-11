@@ -41,7 +41,6 @@ export class ProyectoAnaasisComponent {
 }
   public imagenes: string[] = [
     'assets/ana1.jpeg',
-    'assets/ana10.jpeg',
     'assets/ana2.jpeg',
     'assets/ana3.jpeg',
     'assets/ana4.jpeg',
