@@ -201,3 +201,65 @@
     padding: 30px; // Más aire en los bordes
   }
 }
+/* Estilo para avisar que es clickeable */
+.slide {
+  cursor: zoom-in !important;
+}
+
+/* 📍 Estilos del Modal */
+.image-modal {
+  --background: rgba(0, 0, 0, 0.9);
+  --height: 100%;
+  --width: 100%;
+
+  .modal-zoom-content {
+    --background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 📍 Indica que al hacer clic aquí se cerrará (Zoom out) */
+  cursor: zoom-out;
+  }
+
+  .close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .full-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .full-res-image {
+      max-width: 95vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 15px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      animation: zoomIn 0.3s ease-out;
+      /* 📍 La imagen en sí no debe mostrar el cursor de cierre */
+      cursor: default;
+    }
+  }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}

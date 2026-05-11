@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
-import { businessOutline, rocketOutline, layersOutline, checkmarkCircle, checkmarkCircleOutline } from 'ionicons/icons';
-import { IonIcon, IonChip } from '@ionic/angular/standalone';
+import { businessOutline, rocketOutline, layersOutline, checkmarkCircle, checkmarkCircleOutline, closeOutline } from 'ionicons/icons';
+import { IonIcon, IonChip, IonContent, IonModal } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-gugar',
   templateUrl: './proyecto-gugar.component.html',
   styleUrls: ['./proyecto-gugar.component.scss'],standalone: true,
-  imports: [IonIcon, IonChip]
+  imports: [IonModal, IonContent, IonIcon, IonChip]
 })
 export class ProyectoGugarComponent {
   public imagenes: string[] = [
@@ -31,7 +31,7 @@ export class ProyectoGugarComponent {
   ];
 
   constructor() {
-    addIcons({businessOutline,rocketOutline,checkmarkCircleOutline,checkmarkCircle,layersOutline});
+    addIcons({businessOutline,rocketOutline,closeOutline,checkmarkCircleOutline,checkmarkCircle,layersOutline});
   }
 
   onWheel(event: WheelEvent, container: HTMLElement) {
@@ -49,4 +49,11 @@ export class ProyectoGugarComponent {
     container.scrollLeft += event.deltaX;
   }
 }
+isModalOpen = false;
+  selectedImage: string = '';
+
+  openImage(img: string) {
+    this.selectedImage = img;
+    this.isModalOpen = true;
+  }
 }

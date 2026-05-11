@@ -12,15 +12,37 @@
     <ion-icon name="rocket-outline"></ion-icon>
     <span>Aplicación Móvil de consulta médica utilizando Inteligencia Artificial</span>
   </div>
-<div class="carousel-container" (wheel)="onWheel($event, slider)">
+<div class="carousel-container">
   <div class="slider-wrapper" #slider>
     @for (img of imagenes; track $index) {
-      <div class="slide">
-        <img [src]="img" alt="Captura UTVCO">
+      <div class="slide" (click)="openImage(img)"> <img [src]="img" alt="Captura">
       </div>
     }
   </div>
 </div>
+<ion-modal 
+  [isOpen]="isModalOpen" 
+  (didDismiss)="isModalOpen = false" 
+  [backdropDismiss]="true"
+  class="image-modal">
+  
+  <ng-template>
+    <ion-content class="modal-zoom-content" (click)="isModalOpen = false">
+      
+      <div class="close-button">
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+
+      <div class="full-image-container">
+        <img 
+          [src]="selectedImage" 
+          class="full-res-image" 
+          (click)="$event.stopPropagation()">
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
   <div class="colab-badge">
     <ion-icon name="people-outline"></ion-icon>
     <span>Colaboración Técnica</span>
@@ -49,6 +71,7 @@
     <ion-chip outline="true">Refactoring</ion-chip>
     <ion-chip outline="true">IA</ion-chip>
     <ion-chip outline="true">Android</ion-chip>
+    <ion-chip outline="true">Health Connect</ion-chip>
   </div>
   </ul>
   </div>

@@ -41,11 +41,18 @@ background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
 
 .label-section {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 900;
   color: #783296; // El azul de Gugar para el título de la sección
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 10px 0;
+margin: 20px 0; // Aumenté un poco el margen para que respire
+  
+  /* 📍 LA CLAVE: Centrado horizontal */
+  text-align: center; 
+  
+  /* Opcional: Si quieres que tenga una línea decorativa debajo para resaltar */
+  display: block; 
+  width: 100%;
 }
 ion-content {
   --overflow: auto; // Fuerza un scroll más controlado

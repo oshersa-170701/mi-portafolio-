@@ -9,7 +9,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "deploy": "ionic build --prod -- --base-href /mi-portafolio-/ && npx angular-cli-ghpages --dir=www"
   },
   "private": true,
   "dependencies": {

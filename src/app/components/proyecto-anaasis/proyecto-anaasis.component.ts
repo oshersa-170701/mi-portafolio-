@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
-import { gitBranchOutline, peopleOutline, codeWorkingOutline, checkmarkCircleOutline, logoAndroid, lockClosedOutline, rocketOutline } from 'ionicons/icons';
-import { IonIcon, IonChip } from '@ionic/angular/standalone';
+import { gitBranchOutline, peopleOutline, codeWorkingOutline, checkmarkCircleOutline, logoAndroid, lockClosedOutline, rocketOutline, closeOutline } from 'ionicons/icons';
+import { IonIcon, IonChip, IonModal, IonContent } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-proyecto-anaasis',
   templateUrl: './proyecto-anaasis.component.html',
   styleUrls: ['./proyecto-anaasis.component.scss'],
 standalone: true,
-  imports: [IonIcon, IonChip]
+  imports: [IonContent, IonModal, IonIcon, IonChip]
 })
 export class ProyectoAnaasisComponent {
   public logros: string[] = [
@@ -21,7 +21,7 @@ export class ProyectoAnaasisComponent {
   ];
 
   constructor() {
-    addIcons({logoAndroid,rocketOutline,peopleOutline,checkmarkCircleOutline,lockClosedOutline,gitBranchOutline,codeWorkingOutline,});
+    addIcons({logoAndroid,rocketOutline,closeOutline,peopleOutline,checkmarkCircleOutline,lockClosedOutline,gitBranchOutline,codeWorkingOutline,});
   }
   // Función para manejar el scroll con la rueda del mouse sin usar Shift
  onWheel(event: WheelEvent, container: HTMLElement) {
@@ -47,6 +47,12 @@ export class ProyectoAnaasisComponent {
     'assets/ana6.jpeg',
     'assets/ana7.jpeg',
     'assets/ana8.jpeg',
-    'assets/ana10.jpeg',
   ];
+  isModalOpen = false;
+  selectedImage: string = '';
+
+  openImage(img: string) {
+    this.selectedImage = img;
+    this.isModalOpen = true;
+  }
 }
