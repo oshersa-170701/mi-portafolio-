@@ -41,12 +41,16 @@ export class ProyectoAnaasisComponent {
 }
   public imagenes: string[] = [
     'assets/ana1.jpeg',
+    'assets/ana10.jpeg',
+    'assets/ana2.jpeg',
     'assets/ana3.jpeg',
     'assets/ana4.jpeg',
     'assets/ana5.jpeg',
     'assets/ana6.jpeg',
     'assets/ana7.jpeg',
     'assets/ana8.jpeg',
+    'assets/ana9.jpeg',
+
   ];
   isModalOpen = false;
   selectedImage: string = '';
